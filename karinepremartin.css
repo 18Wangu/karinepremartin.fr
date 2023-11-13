@@ -148,9 +148,9 @@ body{
 
 
 /******* responsive **********/
-@media only screen and (max-width: 430px) {
+@media (max-width: 430px) {
   body{
-    padding: 20px;
+    padding: 35px;
   }
   #homepage{
     flex-direction: column;
@@ -161,18 +161,11 @@ body{
   }
   .carousel-container {
     width: 330px;
+    margin-left: -15px;
+    margin-top: 80px;
   }
   .carousel-buttons {
     width: 330px;
-  }
-}
-@media only screen and (max-width: 780px) {
-  .carousel-container {
-    width: 330px;
-    margin-left: 200px;
-  }
-  .carousel-buttons {
-    width: 330px;
-    margin-left: 200px;
+    margin-left: -15px;
   }
 }
