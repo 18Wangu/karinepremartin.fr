@@ -1,0 +1,178 @@
+/****************** Initialisation de la page ******************/
+*,::before,::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/****************** font ******************/
+@font-face{
+  font-family: "Future-font";
+  src: url("fonts/SansSerifBookFLF.otf");
+}
+@font-face{
+  font-family: "Future-font-light";
+  src: url("fonts/SansSerifFLF.otf");
+}
+
+/****************** home page ******************/
+body{
+  background-color: black;
+  padding: 50px;
+}
+#homepage{
+  display: flex;
+  justify-content: space-between;
+}
+
+/****************** logo ******************/
+#logo-maman a{
+  font-family: "Future-font-light";
+  color: white;
+  text-decoration: none;
+  letter-spacing: 10px;
+}
+#logo-maman h1{  
+  font-size: 20px;
+}
+#logo-maman h2{  
+  font-size: 15px;
+}
+
+/****************** Bouton de navigation ******************/
+#creations_maman{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 140px);
+  position: relative;
+}
+.navbar{
+  display: flex;
+  position: relative;
+}
+.icone{
+  margin: 15px 0px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.trait-horizontal{
+  height: 1px;
+  width: 50px;
+  background-color: white;
+}
+.trait-vertical{
+  margin-left: 50px;
+  height: 60px;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+  top: -30px;
+}
+
+/********* description plume & peinture & modelage ***********/
+#creations_maman .plumes h1, #creations_maman .peintures h1, #creations_maman .modelage h1{
+  margin-left: 60px;
+  font-family: "Future-font-light";
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: -50px;
+}
+#creations_maman .plumes h2, #creations_maman .peintures h2, #creations_maman .modelage h2{
+  margin-left: 70px;
+  font-family: "Future-font-light";
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: -10px;
+  width: 100px;
+}
+
+
+/* hover navbar */
+.apparition{
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+.icone:hover + .apparition{
+  display: block;
+}
+
+/********** images **********/
+#homepage article{
+  height: calc(100vh - 140px);
+  position: relative;
+  margin-right: 150px;
+}
+
+/********** carousel image **********/
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-container img {
+  width: 100%;
+  display: none;
+  height: 80vh;
+}
+.carousel-container img:first-child {
+  display: block;
+}
+.carousel-buttons {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#prevBtnPlumes, #nextBtnPlumes, #prevBtnPeintures, #nextBtnPeintures{
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+/******* responsive **********/
+@media only screen and (max-width: 430px) {
+  body{
+    padding: 20px;
+  }
+  #homepage{
+    flex-direction: column;
+  }
+  #creations_maman{
+    height: 0;
+    margin-top: 150px;
+  }
+  .carousel-container {
+    width: 330px;
+  }
+  .carousel-buttons {
+    width: 330px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .carousel-container {
+    width: 330px;
+    margin-left: 200px;
+  }
+  .carousel-buttons {
+    width: 330px;
+    margin-left: 200px;
+  }
+}
